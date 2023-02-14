@@ -39,7 +39,7 @@
 
     $p2 =  new player("Foysal");
 
-    $p1->set_name("Farhad Foysal");.
+    $p1->set_name("Farhad Foysal");
     $p2->set_name("Farhad MOni");
 
     echo $p1->get_name()." <br>".$p2->get_name()."<br>".$p2->get_run()."<br>";
