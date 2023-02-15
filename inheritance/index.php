@@ -82,8 +82,16 @@
             // incr_id();
 
         }
+        function info(){
+            return $this->d_name."<br>".$this->d_phone;
+        }
 
     }
+
+    class assistant extends driver{
+
+    }
+
 
 
     $bus = array();
@@ -92,11 +100,12 @@
 
     $bus[0] = new car("Car-1","blue","2500000","hondai",5,1);
 
-
     $bus[1] = new bus("bus-1","blue","350000","hondai",5,2);
 
     $d[0] = new driver("Farhad Foysal","01816444372");
     $d[1] = new driver("Faid Ahmed","01585855075");
+
+
 
     $bus[0]->driver = $d[0];
     $bus[1]->driver = $d[1];
@@ -104,6 +113,14 @@
     echo "Veichle name: ".$bus[0]->name."<br>V.Id: ".$bus[0]->num_car()."<br>Tax: ".$bus[0]->tax."<br>D.Name: ".$bus[0]->driver->d_name."<br>D.Phone: ".$bus[0]->driver->d_phone;
 
     echo "<br>Veichle name: ".$bus[1]->name."<br>V.Id: ".$bus[1]->num_bus()."<br>Tax: ".$bus[1]->tax."<br>D.Name: ".$bus[1]->driver->d_name."<br>D.Phone: ".$bus[1]->driver->d_phone;
+
+    // multiple inheritance
+    $d[2] = new assistant("Jehadul Islam","01690175881");
+
+    echo "<br>".$d[2]->d_name."<br>".$d[2]->d_phone."<br>";
+    echo $d[2]->info();
+
+
 
 
     

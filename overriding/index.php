@@ -114,13 +114,38 @@
 
     echo "<br>Veichle name: ".$bus[1]->name."<br>V.Id: ".$bus[1]->num_bus()."<br>Tax: ".$bus[1]->tax."<br>D.Name: ".$bus[1]->driver->d_name."<br>D.Phone: ".$bus[1]->driver->d_phone;
 
-
+    // multiple inheritance
     $d[2] = new assistant("Jehadul Islam","01690175881");
 
     echo "<br>".$d[2]->d_name."<br>".$d[2]->d_phone."<br>";
     echo $d[2]->info();
 
+    //OverRiding OOP
 
+    class base{
+        public $name = "Parent Name";
+
+        public function calculate($a=1, $b=2){
+            return $a*$b;
+        }
+
+    }
+    class derived extends base{
+        public $name = "Derived Name";
+        public function calculate($a=3, $b=2){
+            return $a-$b;
+        }
+    }
+
+    $test = new base();
+
+    echo "<br>".$test->name;
+
+    $test = new derived();
+    echo "<br>".$test->name;
+
+
+    echo "<br>".$test->calculate(3,2);
 
 
     
