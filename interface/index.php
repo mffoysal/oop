@@ -1,4 +1,5 @@
 <?php
+    //interface may not include property
     interface base_main{
         function cal_main($a);
     }
