@@ -31,6 +31,9 @@
             echo isset($this->details[$property]);
 
         }
+        public function __toString(){
+            return "You can't print any obj as a string of class : ".get_class($this);
+        }
     }
 
     $test = new base();
@@ -40,10 +43,13 @@
 
     // echo isset($test->course);
 
-    echo isset($test->age);
+    // echo isset($test->age);
 
     // echo empty($test->age);
 
+// to string code 
+
+    echo $test;
 
 
 

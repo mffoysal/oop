@@ -17,7 +17,7 @@
     $test = new first();
 
     class base{
-        public $name;
+        public $name = "farhad Fosyal";
         private $course;
         private $details = ["name"=> "test name", "age"=> "20"]; 
 
@@ -31,20 +31,32 @@
             echo isset($this->details[$property]);
 
         }
+
+
+        public function __unset($property){
+            unset($this->$property);
+        }
     }
 
     $test = new base();
-    // $test->Name("Farhad","Foysal");
+    $test->Name("Farhad","Foysal");
 
     // echo isset($test->name);
 
     // echo isset($test->course);
 
-    echo isset($test->age);
+    // echo isset($test->age);
 
     // echo empty($test->age);
 
+    // unset code
 
+    unset($test->course); // unset private property
+
+
+    // echo $test->course; // undefined property
+
+    print_r($test);
 
 
 
